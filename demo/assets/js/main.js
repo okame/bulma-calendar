@@ -47,4 +47,9 @@ ready(function () {
         weekStart:   1
     });
 
+    bulmaCalendar.attach('#selectMonthCalendar').forEach(function(calendar) {
+      calendar.on('select:month', function(e) {
+        console.log(e.data.date)
+      })
+    })
 });

@@ -908,6 +908,7 @@ export default class bulmaCalendar extends EventEmitter {
 
         this.datePicker.on('select', this.onSelectDateTimePicker);
         this.datePicker.on('select:start', this.onSelectDateTimePicker);
+        this.datePicker.on('select:month', this.onSelectDateTimePicker);
         this.timePicker.on('select', this.onSelectDateTimePicker);
         this.timePicker.on('select:start', this.onSelectDateTimePicker);
 

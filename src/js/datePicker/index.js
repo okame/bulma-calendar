@@ -245,9 +245,10 @@ export default class datePicker extends EventEmitter {
         const newDate     = dateFns.setMonth(this._visibleDate, parseInt(e.currentTarget.dataset.month) - 1);
         this._visibleDate = this.min ? dateFns.max([newDate, this.min]) : newDate;
         this._visibleDate = this.max ? dateFns.min([this._visibleDate, this.max]) : this._visibleDate;
+        this._select(newDate, false);
+        this.emit('select:month', this);
 
         this.refresh();
-
     }
 
     onYearClickDatePicker(e) {

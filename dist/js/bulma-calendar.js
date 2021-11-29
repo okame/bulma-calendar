@@ -46569,6 +46569,7 @@ var bulmaCalendar = function (_EventEmitter) {
 
             this.datePicker.on('select', this.onSelectDateTimePicker);
             this.datePicker.on('select:start', this.onSelectDateTimePicker);
+            this.datePicker.on('select:month', this.onSelectDateTimePicker);
             this.timePicker.on('select', this.onSelectDateTimePicker);
             this.timePicker.on('select:start', this.onSelectDateTimePicker);
 
@@ -58386,6 +58387,8 @@ var datePicker = function (_EventEmitter) {
             var newDate = __WEBPACK_IMPORTED_MODULE_2_date_fns__["D" /* setMonth */](this._visibleDate, parseInt(e.currentTarget.dataset.month) - 1);
             this._visibleDate = this.min ? __WEBPACK_IMPORTED_MODULE_2_date_fns__["z" /* max */]([newDate, this.min]) : newDate;
             this._visibleDate = this.max ? __WEBPACK_IMPORTED_MODULE_2_date_fns__["A" /* min */]([this._visibleDate, this.max]) : this._visibleDate;
+            this._select(newDate, false);
+            this.emit('select:month', this);
 
             this.refresh();
         }
