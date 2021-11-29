@@ -502,8 +502,8 @@ export default class datePicker extends EventEmitter {
 
         this._renderDays();
 
-        this._ui.body.dates.classList.add('is-active');
-        this._ui.body.months.classList.remove('is-active');
+        this._ui.body.dates.classList.remove('is-active');
+        this._ui.body.months.classList.add('is-active');
         this._ui.body.years.classList.remove('is-active');
 
         return this;
