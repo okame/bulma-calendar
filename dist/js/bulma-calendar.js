@@ -58369,7 +58369,8 @@ var datePicker = function (_EventEmitter) {
                 this._toggleNextButton(false);
                 this._togglePreviousButton(false);
 
-                var currentYear = this._ui.body.years.querySelector('.calendar-year.is-active');
+                var currentYear = this._ui.body.years.querySelector('.datepicker-year.is-active');
+                console.log(currentYear);
                 if (currentYear) {
                     this._ui.body.years.scrollTop = currentYear.offsetTop - this._ui.body.years.offsetTop - this._ui.body.years.clientHeight / 2;
                 }
