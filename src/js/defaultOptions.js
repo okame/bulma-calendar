@@ -20,6 +20,7 @@ const defaultOptions = {
     todayLabel:          'Today',
     nowLabel:            'Now',
     validateLabel:       'Validate',
+    enableDateSwitch:    true,
     enableMonthSwitch:   true,
     enableYearSwitch:    true,
     startDate:           undefined,

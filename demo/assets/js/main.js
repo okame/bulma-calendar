@@ -47,7 +47,7 @@ ready(function () {
         weekStart:   1
     });
 
-    bulmaCalendar.attach('#selectMonthCalendar').forEach(function(calendar) {
+    bulmaCalendar.attach('#selectMonthCalendar', { enableDateSwitch: true }).forEach(function(calendar) {
       calendar.on('select:month', function(e) {
         console.log(e.data.date)
       })
